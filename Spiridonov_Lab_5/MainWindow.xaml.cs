@@ -217,9 +217,6 @@ namespace Spiridonov_Lab_5
         }
     }
 
-
-
-
     public partial class MainWindow : Window
     {
 
@@ -283,9 +280,7 @@ namespace Spiridonov_Lab_5
 
         private void btnInfo_Click(object sender, RoutedEventArgs e)
         {
-
             Student stud = lsbxOutput.SelectedItem as Student;
-
             MessageBox.Show(stud.info(), "Информация о студенте", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
@@ -293,7 +288,7 @@ namespace Spiridonov_Lab_5
         {
             try
             {
-                if (!editMode)
+                if (editMode == false)
                 {
                     Student student = new Student(tbxLastName.Text,
                       tbxFirstName.Text,
